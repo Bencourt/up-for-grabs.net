@@ -131,6 +131,7 @@ img {
   border: none; }
   
 #go-back-home {
+  width: 15vw;
   margin: 20px 0 0; }
   #go-back-home:hover {
     background-image: none; }
