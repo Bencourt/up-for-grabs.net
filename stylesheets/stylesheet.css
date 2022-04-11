@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   font-family: 'Cookie', cursive;  
   margin-bottom: 20px;
-  color: #2E7BA9;
+  color: #addfff;
 }
 
 h1 {
@@ -99,7 +99,8 @@ h1 {
 }
 
 .block h1 {
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==");
+  /*background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==");
+  */
   text-align: center;
   text-shadow:
        1px 1px 0 #225B7D;
@@ -120,7 +121,7 @@ h3 {
 h4, h5, h6 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
-  color: #225B7D;
+  color: #aaa;
 }
 
 p {
@@ -327,7 +328,7 @@ footer {
 
 a, .as-link {
   text-decoration: none;
-  color: #2E7BA9;
+  color: #94d6ff;
   line-height: 1.4em;
   display: inline-block;
   vertical-align: baseline;
@@ -341,7 +342,7 @@ a, .as-link {
   -o-transition: color 0.3s;
   transition: color 0.3s; }
   a.main, a:hover, .as-link.main, .as-link:hover {
-    color: #2E7BA9;
+    color: #4c89ac;
   }
   a.big-button, .as-link.big-button {
     min-width: 30%;

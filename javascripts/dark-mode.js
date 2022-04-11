@@ -17,14 +17,16 @@ define([], () => {
    *
    * @param {HTMLElement} viewModeElement
    * @param {HTMLElement} viewModeAnchor
+   * @param {HTMLElement} logo
    */
-  function setDarkMode(viewModeElement, viewModeAnchor) {
+  function setDarkMode(viewModeElement, viewModeAnchor, logo) {
     root.style.setProperty('--body-back', '#111111');
     root.style.setProperty('--body-color', '#eeeded');
     root.style.setProperty('--abs', 'rgb(37, 37, 37)');
 
     viewModeElement.setAttribute('src', '/images/sun-light.png');
     viewModeAnchor.title = 'light-mode';
+    logo.setAttribute('src', '/images/up_for_grabs_logo_long_white.svg');
   }
 
   /**
@@ -32,14 +34,16 @@ define([], () => {
    *
    * @param {HTMLElement} viewModeElement
    * @param {HTMLElement} viewModeAnchor
+   * @param {HTMLElement} logo
    */
-  function setLightMode(viewModeElement, viewModeAnchor) {
+  function setLightMode(viewModeElement, viewModeAnchor, logo) {
     root.style.setProperty('--body-back', '#f9f9f9');
     root.style.setProperty('--body-color', '#303030');
     root.style.setProperty('--abs', '#FFF');
 
     viewModeElement.setAttribute('src', '/images/Dim-Night.png');
     viewModeAnchor.title = 'dark-mode';
+    logo.setAttribute('src', '/images/up_for_grabs_logo_long_blue.svg');
   }
 
   /**
@@ -67,16 +71,21 @@ define([], () => {
       return;
     }
 
+    const logo = document.getElementById('go-back-home-image');
+    if(!logo) {
+      return;
+    }
+
     if (!lightModeEnabled) {
-      setDarkMode(viewModeElement, viewModeAnchor);
+      setDarkMode(viewModeElement, viewModeAnchor, logo);
     }
 
     viewModeAnchor.addEventListener('click', () => {
       if (lightModeEnabled) {
-        setDarkMode(viewModeElement, viewModeAnchor);
+        setDarkMode(viewModeElement, viewModeAnchor, logo);
         updateValue('dark');
       } else {
-        setLightMode(viewModeElement, viewModeAnchor);
+        setLightMode(viewModeElement, viewModeAnchor, logo);
         updateValue('light');
       }
     });
