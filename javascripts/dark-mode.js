@@ -86,7 +86,7 @@ define([], () => {
       return;
     }
 
-    //default to dark mode
+    // default to dark mode
     if (darkModeEnabled) {
       setDarkMode(viewModeElement, viewModeAnchor, logo);
       updateValue('dark');
