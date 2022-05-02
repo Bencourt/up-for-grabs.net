@@ -24,6 +24,10 @@ define([], () => {
     root.style.setProperty('--body-color', '#eeeded');
     root.style.setProperty('--abs', 'rgb(37, 37, 37)');
     root.style.setProperty('--box-shadow-color', 'rgba(7, 58, 97,0.5)');
+    root.style.setProperty('--box-back-color', '#333');
+    root.style.setProperty('--visiblue', '#94d6ff');
+    root.style.setProperty('--back-to-top-back', '#555');
+    root.style.setProperty('--back-to-top-color', '#ddd');
 
     viewModeElement.setAttribute('src', '/images/sun-light.png');
     viewModeAnchor.title = 'light-mode';
@@ -42,6 +46,10 @@ define([], () => {
     root.style.setProperty('--body-color', '#303030');
     root.style.setProperty('--abs', '#FFF');
     root.style.setProperty('--box-shadow-color', 'rgba(0,0,0,0.2)');
+    root.style.setProperty('--box-back-color', '#eee');
+    root.style.setProperty('--visiblue', '#2e7ba9');
+    root.style.setProperty('--back-to-top-back', '#ddd');
+    root.style.setProperty('--back-to-top-color', '#555');
 
     viewModeElement.setAttribute('src', '/images/Dim-Night.png');
     viewModeAnchor.title = 'dark-mode';

@@ -22,8 +22,12 @@ MeyerWeb Reset
   --body-back: #f9f9f9;
   --body-color:#303030;
   --box-shadow-color:rgba(0,0,0,0.2) ;
+  --box-back-color: #333;
   --abs:#FFF ;
   --view-mode:true ;
+  --visiblue: #94d6ff;
+  --back-to-top-back: #555;
+  --back-to-top-color: #ddd;
 }
 /* for dark mode
 --body-back: #111111;
@@ -92,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
   font-family: 'Cookie', cursive;  
   margin-bottom: 20px;
-  color: #addfff;
+  color: var(--visiblue);
 }
 
 h1 {
@@ -100,8 +104,7 @@ h1 {
 }
 
 .block h1 {
-  /*background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==");
-  */
+  background: url(../images/header-background.png);
   text-align: center;
   text-shadow:
        1px 1px 0 #225B7D;
@@ -153,8 +156,8 @@ img {
     position: fixed;
     bottom: 50px;
     right: 50px;
-    background-color: #DDD;
-    color: #555;
+    background-color: var(--back-to-top-back);
+    color: var(--back-to-top-color);
     text-align: center;
     font-size: 23px;
     text-decoration: none;
@@ -329,7 +332,7 @@ footer {
 
 a, .as-link {
   text-decoration: none;
-  color: #94d6ff;
+  color: var(--visiblue);
   line-height: 1.4em;
   display: inline-block;
   vertical-align: baseline;
@@ -551,7 +554,8 @@ form {
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 .data-box{
-  box-shadow: 10px 10px 30px var(--box-shadow-color);
+  box-shadow: 0px 0px 20px var(--box-shadow-color); 
+  background-color: var(--box-back-color);
   padding: 10px;
   /* border: 1px solid var(--body-color) ; */
 }
