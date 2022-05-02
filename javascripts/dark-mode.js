@@ -7,8 +7,8 @@ if (typeof define !== 'function') {
 
 define([], () => {
   const storedValue = window.sessionStorage.getItem('mode');
-  // default to light mode if no stored value found, or stored value is anything else
-  let lightModeEnabled = !(storedValue && storedValue === 'dark');
+  // default to dark mode if no stored value found, or stored value is anything else
+  let darkModeEnabled = !(storedValue && storedValue === 'light');
 
   const root = document.documentElement;
 
@@ -62,7 +62,7 @@ define([], () => {
    */
   function updateValue(value) {
     window.sessionStorage.setItem('mode', value);
-    lightModeEnabled = value === 'light';
+    darkModeEnabled = value === 'dark';
   }
 
   function setupDarkModeListener() {
@@ -86,17 +86,22 @@ define([], () => {
       return;
     }
 
-    if (!lightModeEnabled) {
+    //default to dark mode
+    if (darkModeEnabled) {
       setDarkMode(viewModeElement, viewModeAnchor, logo);
+      updateValue('dark');
+    } else {
+      setLightMode(viewModeElement, viewModeAnchor, logo);
+      updateValue('light');
     }
 
     viewModeAnchor.addEventListener('click', () => {
-      if (lightModeEnabled) {
-        setDarkMode(viewModeElement, viewModeAnchor, logo);
-        updateValue('dark');
-      } else {
+      if (darkModeEnabled) {
         setLightMode(viewModeElement, viewModeAnchor, logo);
         updateValue('light');
+      } else {
+        setDarkMode(viewModeElement, viewModeAnchor, logo);
+        updateValue('dark');
       }
     });
   }
