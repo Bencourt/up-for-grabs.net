@@ -82,7 +82,7 @@ define([], () => {
     }
 
     const logo = document.getElementById('go-back-home-image');
-    if(!logo) {
+    if (!logo) {
       return;
     }
 
